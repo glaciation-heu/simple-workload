@@ -125,7 +125,7 @@ poetry run pre-commit install
 
 5. Launch the project:
 ```bash
-poetry run python main.py
+poetry run python main.py <time> <minio_host> <minio_access_key> <minio_secret_key> <source_bucket> <target_bucket> <dataset_name>
 ```
 
 ## Manual build and deployment on Minikube
