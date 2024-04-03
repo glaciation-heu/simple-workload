@@ -1,5 +1,5 @@
-import time
 import argparse
+import time
 from io import BytesIO
 
 import pandas as pd
