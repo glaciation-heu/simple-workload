@@ -1,0 +1,15 @@
+replicaCount: 1
+
+image:
+  repository: ""
+  tag: ""
+  pullPolicy: IfNotPresent
+
+arguments:
+  time: 3600
+  minioHost: localhost:9000
+  minioAccessKey:
+  minioSecretKey:
+  sourceBucket: "source"
+  targetBucket: "target"
+  datasetName: "example.csv"

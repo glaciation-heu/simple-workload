@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "app.fullname" . }}
+spec:
+  template:
+    metadata:
+      name: {{ include "app.fullname" . }}
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          args:
+            - "{{ .Values.arguments.time }}"
+            - "{{ .Values.arguments.minioHost }}"
+            - "{{ .Values.arguments.minioAccessKey }}"
+            - "{{ .Values.arguments.minioSecretKey }}"
+            - "{{ .Values.arguments.sourceBucket }}"
+            - "{{ .Values.arguments.targetBucket }}"
+            - "{{ .Values.arguments.datasetName }}"
