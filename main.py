@@ -30,6 +30,9 @@ def run_simple_workload(
     timeout = time.time() + run_time
     ascending = True
 
+    # To ensure the workload runs for a specified duration, the read operation
+    # from the source bucket, sorting, and copying to the target bucket are
+    # performed in a loop.
     while True:
         print(".", end="", flush=True)
 

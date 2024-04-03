@@ -2,7 +2,7 @@
 Simple workload for demonstrating the GLACIATION project.  
 
 The application loads a dataset from the `source bucket` into memory, sorts the rows in the dataset, and writes the sorted dataset to the `target bucket`.  
-In the dataset folder, there is an example dataset `example.csv`.  
+In the dataset folder, there is an example dataset `example.csv` from [Machinery Fault Dataset](https://www.kaggle.com/datasets/uysalserkan/fault-induction-motor-dataset).  
 Sorting is done based on the first column. The file should not contain headers.
 
 ## Usage
@@ -173,19 +173,19 @@ kubectl apply -f minio-dev.yaml
 kubectl port-forward minio 9000:9000
 kubectl port-forward minio 9090:9090
 ```
-1. Open [UI MinIO](http://localhost:9090) (login is `minioadmin`, password is `minioadmin`) and:
+7. Open [UI MinIO](http://localhost:9090) (login is `minioadmin`, password is `minioadmin`) and:
 - Create Access and secret keys on the page [Access Keys](http://localhost:9090/access-keys);
 - Create Source and Target buckets on the page [Buckets](http://localhost:9090/buckets);
 - Upload Dataset `dataset/example.csv` to Source bucket on the page [Source bucket](http://localhost:9090/browser/source).
-1. Build a docker image:
+8. Build a docker image:
 ```bash
 docker build . -t simple-workload:latest
 ```
-1. Upload the docker image to minikube:
+9. Upload the docker image to minikube:
 ```bash
 minikube image load simple-workload:latest
 ```
-1.  Deploy the job:
+10.  Deploy the job:
 ```bash
 helm install simple-workload ./charts/simple-workload
   --version 0.1.0
