@@ -21,7 +21,8 @@ def run_simple_workload(
         minio_host,
         access_key=minio_access_key,
         secret_key=minio_secret_key,
-        secure=False,
+        cert_check=False,
+        # secure=False,
     )
 
     print("Connected")

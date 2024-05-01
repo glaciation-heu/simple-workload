@@ -19,3 +19,5 @@ spec:
             - "{{ .Values.arguments.sourceBucket }}"
             - "{{ .Values.arguments.targetBucket }}"
             - "{{ .Values.arguments.datasetName }}"
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}

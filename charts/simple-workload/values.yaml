@@ -13,3 +13,13 @@ arguments:
   sourceBucket: "source"
   targetBucket: "target"
   datasetName: "example.csv"
+
+resources:
+  limits:
+    cpu: "4"
+    memory: "8192Mi"
+    ephemeral-storage: "600Mi"
+  requests:
+    cpu: "3"
+    memory: "7168Mi"
+    ephemeral-storage: "500Mi"
