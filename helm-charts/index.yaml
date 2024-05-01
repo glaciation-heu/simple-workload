@@ -12,6 +12,16 @@ entries:
     - https://glaciation-heu.github.io/simple-workload/helm-charts/simple-workload-0.1.0.tgz
     version: 0.1.0
   - apiVersion: v2
+    appVersion: 0.1.0-dev.2.main.e6330312
+    created: "2024-05-01T06:44:40.791962633Z"
+    description: Simple workload for testing
+    digest: 7693a16b5e0b586747f3b72674ed40a7ba7aff6ff678c97dfda0d0c728254a79
+    name: simple-workload
+    type: application
+    urls:
+    - https://glaciation-heu.github.io/simple-workload/helm-charts/simple-workload-0.1.0-dev.2.main.e6330312.tgz
+    version: 0.1.0-dev.2.main.e6330312
+  - apiVersion: v2
     appVersion: 0.1.0-dev.1.main.1cec95ee
     created: "2024-04-03T12:36:21.693594331Z"
     description: Simple workload for testing
@@ -31,4 +41,4 @@ entries:
     urls:
     - https://glaciation-heu.github.io/simple-workload/helm-charts/simple-workload-0.1.0-dev.0.main.95d3af36.tgz
     version: 0.1.0-dev.0.main.95d3af36
-generated: "2024-04-03T12:36:21.693031654Z"
+generated: "2024-05-01T06:44:40.791566669Z"
